@@ -25,18 +25,18 @@ public class AutoresTeste {
 	@Test
 	public void deveFormatarNomeESobrenomeDoAutor4(){
 		String nomeFormatado = Autores.formata("celso mello de araujo");
-		assertEquals("ARAUJO, Celso mello de", nomeFormatado);
+		assertEquals("ARAUJO, Celso Mello de", nomeFormatado);
 	}
 	
 	@Test
 	public void deveFormatarNomeESobrenomeDoAutor5(){
 		String nomeFormatado = Autores.formata("celso mello de araujo neto");
-		assertEquals("ARAUJO NETO, Celso mello de", nomeFormatado);
+		assertEquals("ARAUJO NETO, Celso Mello de", nomeFormatado);
 	}
 	@Test
 	public void deveFormatarNomeESobrenomeDoAutor6(){
 		String nomeFormatado = Autores.formata("maria eduarda das chagas sobrinha");
-		assertEquals("CHAGAS SOBRINHA, Maria eduarda das", nomeFormatado);
+		assertEquals("CHAGAS SOBRINHA, Maria Eduarda das", nomeFormatado);
 	}
 	
 	@Test
