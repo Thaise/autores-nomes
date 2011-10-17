@@ -1,4 +1,3 @@
-
 public class Autores {
 
 	public static String formata(String nomeAutor) {
@@ -10,24 +9,52 @@ public class Autores {
 		String restoNome = nome.substring(1,nome.length());
 		String maiusculaNome = "";		
 		maiusculaNome  = primeiraLetraNome.toUpperCase();
+		String nomeCorreto = maiusculaNome+restoNome;
 				
 		String sobrenome = separandoPalavras[tamanho -1];
 		String maiusculaSobrenome  = "";
 		maiusculaSobrenome  = sobrenome.toUpperCase();
+		String sobrenomeCorreto = maiusculaSobrenome;
 		
 		String nomesDoMeio = "";
 
 		for(int i = 1; i < tamanho -1; i++){
-			nomesDoMeio = nomesDoMeio+" "+separandoPalavras[i];	
-		/*Para completar: faltam as primeiras letras de cada nome retornarem maiúsculas 
-		com excessão dos nomes:"de", "da", "do" etc.*/
+			
+			if("de".equals(separandoPalavras[i]) || "da".equals(separandoPalavras[i])||"do".equals(separandoPalavras[i])
+				||"das".equals(separandoPalavras[i])||"dos".equals(separandoPalavras[i])){
+				
+				nomesDoMeio = nomesDoMeio+" "+separandoPalavras[i];
+				
+			}else{
+				String primeiraLetraNomeDoMeio = separandoPalavras[i].substring(0,1);
+				String maiusculaNomeDoMeio = "";
+				maiusculaNomeDoMeio = primeiraLetraNomeDoMeio.toUpperCase();
+				String restoNomeDoMeio =  separandoPalavras[i].substring(1,separandoPalavras[i].length());
+				
+				nomesDoMeio = nomesDoMeio+" "+maiusculaNomeDoMeio+restoNomeDoMeio;
+				
+			}
 		}
 		
 		String sobrenome2 = "";
 		String nomesDoMeio2 = "";
 		
 		for(int i = 1; i < tamanho -2; i++){
-			nomesDoMeio2 = nomesDoMeio2+" "+separandoPalavras[i];
+			String primeiraLetraNomeDoMeio2 = separandoPalavras[i].substring(0,1);
+			String maiusculaNomeDoMeio2 = "";
+			maiusculaNomeDoMeio2 = primeiraLetraNomeDoMeio2.toUpperCase();
+			String restoNomeDoMeio2 =  separandoPalavras[i].substring(1,separandoPalavras[i].length());
+			
+			if("de".equals(separandoPalavras[i]) || "da".equals(separandoPalavras[i])||"do".equals(separandoPalavras[i])
+				||"das".equals(separandoPalavras[i])||"dos".equals(separandoPalavras[i])){
+					
+					nomesDoMeio2 = nomesDoMeio2+" "+separandoPalavras[i];
+					
+				}else{
+					
+					nomesDoMeio2 = nomesDoMeio2+" "+maiusculaNomeDoMeio2+restoNomeDoMeio2;
+				}	
+			
 		}
 			 if("neto".equals(sobrenome)||"neta".equals(sobrenome)||"filho".equals(sobrenome)
 				||"filha".equals(sobrenome)||"sobrinho".equals(sobrenome)
@@ -35,7 +62,7 @@ public class Autores {
 				 
 				 sobrenome2 = separandoPalavras[tamanho -2].toUpperCase();
 				
-				 return sobrenome2+" "+maiusculaSobrenome+", "+ maiusculaNome + restoNome + nomesDoMeio2;
+				 return sobrenome2+" "+sobrenomeCorreto+", "+ nomeCorreto + nomesDoMeio2;
 			
 			 }else 
 			if(tamanho == 1){
@@ -44,7 +71,7 @@ public class Autores {
 				return maiusculaNome;
 				
 			}else{
-				return maiusculaSobrenome+", "+ maiusculaNome  + restoNome + nomesDoMeio;
+				return sobrenomeCorreto+", "+ nomeCorreto + nomesDoMeio;
 			 }
 	
 	}
