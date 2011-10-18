@@ -12,9 +12,8 @@ public class Autores {
 		String nomeCorreto = maiusculaNome+restoNome;
 				
 		String sobrenome = separandoPalavras[tamanho -1];
-		String maiusculaSobrenome  = "";
-		maiusculaSobrenome  = sobrenome.toUpperCase();
-		String sobrenomeCorreto = maiusculaSobrenome;
+		String sobrenomeCorreto  = "";
+		sobrenomeCorreto  = sobrenome.toUpperCase();
 		
 		String nomesDoMeio = "";
 
