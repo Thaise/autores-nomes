@@ -64,15 +64,14 @@ public class Autores {
 				
 				 return sobrenome2+" "+sobrenomeCorreto+", "+ nomeCorreto + nomesDoMeio2;
 			
-			 }else 
-			if(tamanho == 1){
+			 }else	if(tamanho == 1){
 				maiusculaNome = nome.toUpperCase();
 				
 				return maiusculaNome;
 				
 			}else{
 				return sobrenomeCorreto+", "+ nomeCorreto + nomesDoMeio;
-			 }
+			}
 	
 	}
 }
