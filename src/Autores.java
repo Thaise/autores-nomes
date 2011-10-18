@@ -48,12 +48,12 @@ public class Autores {
 			if("de".equals(separandoPalavras[i]) || "da".equals(separandoPalavras[i])||"do".equals(separandoPalavras[i])
 				||"das".equals(separandoPalavras[i])||"dos".equals(separandoPalavras[i])){
 					
-					nomesDoMeio2 = nomesDoMeio2+" "+separandoPalavras[i];
+				nomesDoMeio2 = nomesDoMeio2+" "+separandoPalavras[i];
 					
-				}else{
+			}else{
 					
-					nomesDoMeio2 = nomesDoMeio2+" "+maiusculaNomeDoMeio2+restoNomeDoMeio2;
-				}	
+				nomesDoMeio2 = nomesDoMeio2+" "+maiusculaNomeDoMeio2+restoNomeDoMeio2;
+			}	
 			
 		}
 			 if("neto".equals(sobrenome)||"neta".equals(sobrenome)||"filho".equals(sobrenome)
