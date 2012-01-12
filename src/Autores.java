@@ -30,9 +30,9 @@ public class Autores {
 		String sobrenomeCorreto = "";
 		sobrenomeCorreto = sobrenome.toUpperCase();
 
-		String nomesDoMeio = formatarNomeDoMeio(separandoPalavras, 1);
+		String nomesDoMeio = formataNomeDoMeio(separandoPalavras, 1);
 		
-		String nomesDoMeioParaSobrenomeFamiliar= formatarNomeDoMeio(separandoPalavras, 2);
+		String nomesDoMeioParaSobrenomeFamiliar= formataNomeDoMeio(separandoPalavras, 2);
 
 		if ("neto".equalsIgnoreCase(sobrenome) || "neta".equalsIgnoreCase(sobrenome)
 				|| "filho".equalsIgnoreCase(sobrenome) || "filha".equalsIgnoreCase(sobrenome)
@@ -53,7 +53,7 @@ public class Autores {
 		}
 	}
 
-	private static String formatarNomeDoMeio(String[] separandoPalavras, int indiceFinalMaximo) {
+	private static String formataNomeDoMeio(String[] separandoPalavras, int indiceFinalMaximo) {
 		String nomesDoMeio = "";
 		for (int i = 1; i < separandoPalavras.length - indiceFinalMaximo; i++) {
 
