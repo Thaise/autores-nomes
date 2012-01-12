@@ -44,4 +44,16 @@ public class AutoresTeste {
 		String nomeFormatado = Autores.formata("guimaraes");
 		assertEquals("GUIMARAES", nomeFormatado);
 	}
+	
+	@Test
+	public void deveFormatarNomeESobrenomeDoAutor8(){
+		String nomeFormatado = Autores.formata("marinete dos santos");
+		assertEquals("SANTOS, Marinete dos", nomeFormatado);
+	}
+	
+	@Test
+	public void deveFormatarNomeESobrenomeDoAutor9(){
+		String nomeFormatado = Autores.formata("frederico dos passos santos filho");
+		assertEquals("SANTOS FILHO, Frederico dos Passos", nomeFormatado);
+	}
 }
